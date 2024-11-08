@@ -17,9 +17,7 @@ export function createCard(
   deleteButton.addEventListener("click", () => deleteCardCallback(cardElement));
 
   const likeButton = cardElement.querySelector(".card__like-button");
-  likeButton.addEventListener("click", (evt) => {
-    likeButton.classList.toggle("card__like-button_is-active");
-  });
+  likeButton.addEventListener("click", () => likeCard(likeButton));
 
   cardImage.addEventListener("click", () =>
     openImagePopupCallback(cardData.name, cardData.link)
@@ -30,4 +28,8 @@ export function createCard(
 
 export function deleteCard(cardElement) {
   cardElement.remove();
+}
+
+function likeCard(likeButton) {
+  likeButton.classList.toggle("card__like-button_is-active");
 }
