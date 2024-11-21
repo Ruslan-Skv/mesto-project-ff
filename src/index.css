@@ -11,3 +11,30 @@
 @import url('./blocks/popup/_is-animated/popup_is-animated.css');
 @import url('./blocks/popup/_is-opened/popup_is-opened.css');
 
+.profile__image {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .profile__image-edit-icon {
+    position: absolute;
+    bottom: 47px;
+    right: 47px;
+    width: 26px;
+    height: 26px;
+    background-image: url('./images/edit-icon.svg');
+    background-size: cover;
+    display: none;
+  }
+  
+  .profile__image:hover .profile__image-edit-icon {
+    display: block;
+  }
+
+  .popup_type_avatar .popup__content {
+    min-block-size: 272px;
+  }
+
+  .popup_type_delete .popup__content {
+    min-block-size: 181px;
+  }
